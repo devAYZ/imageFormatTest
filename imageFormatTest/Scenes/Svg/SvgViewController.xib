@@ -1,22 +1,126 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SvgViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SvgViewController" customModule="imageFormatTest" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="WQ6-pg-2Nl" id="pMg-Z8-SRc"/>
+                <outlet property="nextButton" destination="xsv-q0-TUd" id="HHt-we-ach"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-xl-xp1" userLabel="Image Stack View">
+                    <rect key="frame" x="10" y="64" width="373" height="684"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteImagebillPng" translatesAutoresizingMaskIntoConstraints="NO" id="J3w-qb-QzT">
+                            <rect key="frame" x="162" y="0.0" width="49" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="49" id="Hbg-qG-v5g"/>
+                                <constraint firstAttribute="height" constant="49" id="uPU-uG-5Xd"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" systemColor="separatorColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pillotbillPng" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-Df-Qqg">
+                            <rect key="frame" x="46.666666666666657" y="59" width="280" height="240"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="280" id="1Aa-Nz-Pxo"/>
+                                <constraint firstAttribute="height" constant="240" id="3YB-yD-Fid"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" systemColor="separatorColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billPng" translatesAutoresizingMaskIntoConstraints="NO" id="eVr-dt-kxV">
+                            <rect key="frame" x="11.666666666666657" y="309" width="350" height="375"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="375" id="eHN-HW-dIL"/>
+                                <constraint firstAttribute="width" constant="350" id="qGN-gr-bc9"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" systemColor="separatorColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VGr-2x-nOq" userLabel="Nav Stack View">
+                    <rect key="frame" x="10" y="784" width="373" height="24"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ6-pg-2Nl">
+                            <rect key="frame" x="0.0" y="0.0" width="12" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="Ckn-fi-8i0"/>
+                                <constraint firstAttribute="height" constant="24" id="VaN-8K-dNa"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="leftPng"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsv-q0-TUd">
+                            <rect key="frame" x="361" y="0.0" width="12" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="3ro-MG-ZzZ"/>
+                                <constraint firstAttribute="width" constant="12" id="fr8-Uq-fd1"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="rightPng"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwy-xl-xp1" secondAttribute="trailing" constant="10" id="3ll-0d-QhE"/>
+                <constraint firstItem="dwy-xl-xp1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="9XY-16-NA8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VGr-2x-nOq" secondAttribute="trailing" constant="10" id="EMa-Ay-1eD"/>
+                <constraint firstItem="VGr-2x-nOq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dwy-xl-xp1" secondAttribute="bottom" id="UXw-DN-uuj"/>
+                <constraint firstItem="dwy-xl-xp1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="njt-Oe-wb8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VGr-2x-nOq" secondAttribute="bottom" constant="10" id="rJ7-ky-a2a"/>
+                <constraint firstItem="VGr-2x-nOq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="zYu-yc-wD1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="13" y="-1"/>
         </view>
     </objects>
+    <resources>
+        <image name="billPng" width="375" height="459.66665649414062"/>
+        <image name="deleteImagebillPng" width="49" height="49"/>
+        <image name="leftPng" width="6" height="12"/>
+        <image name="pillotbillPng" width="278.66665649414062" height="236.33332824707031"/>
+        <image name="rightPng" width="6" height="12"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
